@@ -1,7 +1,12 @@
+/* *
+* 2018年12月27日21:07:59
+* 指针
+*/
+
+
 #include <stdio.h>
  
-int main ()
-{
+int main () {
   int  var1;
   char var2[10];
 
