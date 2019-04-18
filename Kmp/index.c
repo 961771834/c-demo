@@ -3,15 +3,15 @@
 #include"SString-operation.c"
 
 void get_next(SString T,int next[]){
-  int i = 1,j = 0;
+  int j = 1,k = 0;
   next[1] = 0;
-  while(i<T[0]){
-    if(j == 0 || T[i] == T[j]){
-        ++i;
+  while(j<T[0]){
+    if(k == 0 || T[j] == T[k]){
         ++j;
-        next[i] = j;
+        ++k;
+        next[j] = k;
     }else{
-      j = next[j];
+      k = next[k];
     }
   } 
 }
