@@ -1,7 +1,7 @@
  #define Qu 4 /* 客户队列数 */
  #define Khjg 5 /* 两相邻到达的客户的时间间隔最大值 */
  #define Blsj 30 /* 每个客户办理业务的时间最大值 */
- #include"../bank-simulation/common.h"
+ #include"../common.h"
 
 // 有序链表
 typedef struct {
@@ -101,6 +101,7 @@ void CustomerDeparture(){
   TotalTime += en.OccurTime -  customer.ArrivalTime;
   if(!QueueEmpty(q[i])){
     GetHead_Q(q[i],&customer);
+    // 事件队列插入一个客户离开事件。
     et.OccurTime = en.OccurTime + customer.Duration;
     et.NType = i;
     OrderInsert(&ev,et,cmp);
