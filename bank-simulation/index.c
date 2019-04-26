@@ -9,9 +9,9 @@ typedef struct {
   int NType; /* 事件类型，Qu表示到达事件,0至Qu-1表示Qu个窗口的离开事件 */
 }Event,ElemType; /* 事件类型，有序链表LinkList的数据元素类型 */
 
-#include"link-list.h"
+#include"../list/link-list.h"
 typedef LinkList EventList; /* 事件链表类型，定义为有序链表 */
-#include"link-list-operation.c"
+#include"../list/link-list-operation.c"
 
 
 // 队列相关部分
@@ -21,8 +21,8 @@ typedef LinkList EventList; /* 事件链表类型，定义为有序链表 */
    int Duration; /* 办理事务所需时间 */
  }QElemType; /* 定义QElemType(队列的数据元素类型)为结构体类型; */
 
-#include"link-queue.h"
-#include"link-queue-operation.c"
+#include"../queue/link-queue.h"
+#include"../queue/link-queue-operation.c"
 
 /* 程序需要的变量 */
 EventList ev; /* 事件表 */
